@@ -15,7 +15,7 @@ input.onkeyup = function () {
     	for (i = 0; i < spans.length; i++)	{
     		if (spans[i] === a.value)	{
     			var n = spans.indexOf(spans[i]);
-    			spgues.splice(a.value,1, spans[n]);
+    			spgues.splice(n,1, spans[n]);
 
 console.log(n);    		
 console.log(a.value);
