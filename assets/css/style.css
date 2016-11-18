@@ -6,8 +6,10 @@ body{
 img{
 	margin: 50px 10px 10px 0px;
 }
+
 .stick {
-	width: 300px;
+	width: 230px;
+	height: 190px;
 	margin:30px 0px 30px 40px;
 }
 #title{
@@ -16,18 +18,42 @@ img{
 	letter-spacing: 2px;
 	font-weight: bold;
 	text-align: center;
+	padding: 15px 0px 10px 0px;
 }
 #main{
 	height: 768px;
 }
 #left{
 	background-color: #D6C5B5;
-	margin: 0px 0px 0px 10px;
-	padding: 0px 0px 0px 10px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 	height: 100%;
-
 }
 #right{
 	background-color: #D6C5B5;
-	margin: 0px 0px 0px 10px;
+	padding: 5px 0px 0px 0px;
+	margin: 0px 10px 10px 10px;
 }
+#left-top, #right-top{
+	text-align: center;
+	padding: 15px 0px 15px 0px;
+}
+#right-top{
+	border-left-color: #941100;
+	border-left-style: groove;
+	border-left-size: 5px;
+}
+#input{
+	padding: 0px 0px 0px 20%;
+}
+#usedLetters{
+	font-size: 40px;
+}
+label{
+	margin: 5px 5px 0px 10px;
+	font-size: 10px;
+}
+
+
+
+

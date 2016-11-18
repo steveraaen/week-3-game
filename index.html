@@ -5,7 +5,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script type="text/javascript" src= "assets/javascript/game.js"></script>
+
 </head>
 <body>
 	<div class= "container" id = "main">
@@ -13,21 +13,31 @@
 			<div class = "col-md-12" id = "title">Hangman</div>
 		</div>
 		<div class = "row" >
-			<div class = "col-md-2"></div>
+			<div class = "col-md-1"></div>
 			<div class = "col-md-4" id = "left"><img class="stick" src = "assets/images/hangman-3.png" alt="full stickman figure"> </div>
-			<div class = "col-md-4" id = "right">
-				<div class = "row">
-					<div class = "col-md-4">
-					<p>Chances Left</p>
+			<div class = "col-md-6" id = "right">
+				
+					<div id = "left-top" class = "col-md-6">						
+							<h4>Chances Left</h4>
+							<p>Your Guesses So Far</p>
+							<div id = "usedletters"><h1></h1></div>
 					</div>
-					<div id = "right-top" class = "col-md-4">
-					<p>Chances Left</p>
-					</div>
-				</div>
 
+					<div id = "right-top" class = "col-md-6">
+							<h4>Next Guess</h4>
+								<div class="form-group row">
+								  	<label for="input" class="col-xs-4 col-form-label">Enter a Letter</label>
+								  <div class="col-xs-5">
+								    <input class="form-control" type="text"  id="input">
+								  </div>
+								</div>
+					</div>
+
+				<div class = "col-md-1"></div>
 			</div>
-			<div class = "col-md-2"></div>
+			
 		</div>
 	</div>
+		<script type="text/javascript" src= "assets/javascript/game.js"></script>
 </body>
 </html>
