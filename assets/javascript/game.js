@@ -1,39 +1,39 @@
 var ans = "nirvana",
 	gues = "_______",
+	used = [];
+	counter = 0;
+	c = document.getElementById("counter");
 	a = document.getElementById("input");
 	spans = ans.split("");
 	spgues = gues.split("")
-
-console.log(spgues);
-console.log(spans);
-
-
-      // Next, we give JavaScript a function to execute when onkeyup event fires.
-
 input.onkeyup = function () {
     a.value = event.key;
-    	for (i = 0; i < spans.length; i++)	{
-    		if (spans[i] === a.value)	{
-    			var n = spans.indexOf(spans[i]);
+    var i = 0;
+
+    	while (i < spans.length)	{
+    	var n = spans.indexOf(spans[i]);
+    		if (spans[i] === a.value && spans[i] !== used[i])	{
     			spgues.splice(n,1, spans[n]);
+    			counter = counter + 0;
+				}
+			else if (spans[i] !== a.value)  {
+				var wrong = a.value;				
+				}
+			else{
 
-console.log(n);    		
-console.log(a.value);
-console.log(spans[i])
-console.log(spans[i] === a.value)
-    	}
+			}
+
+     i++;
+
     }
-/*	    var n = spans.indexOf(a);*/
-/*console.log(a.value);
-console.log(spans[i])	*/	
+         used.push(wrong);
+         counter = used.length;
 
-/*console.log(a.value);
-console.log(input.value);
-console.log(i);*/
-var remaining = document.getElementById("usedletters");
+console.log(used);
+console.log(counter);
+console.log(spans[i] != a.value)
+var remaining = document.getElementById("goodletters");
 remaining.innerHTML = spgues;
 }
-
-
-var remaining = document.getElementById("usedletters");
+var remaining = document.getElementById("goodletters");
 remaining.innerHTML = spgues;
