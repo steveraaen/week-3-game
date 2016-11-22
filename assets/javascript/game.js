@@ -1,39 +1,66 @@
-var ans = "nirvana",
-	gues = "_______",
-	used = [];
-	counter = 0;
-	c = document.getElementById("counter");
-	a = document.getElementById("input");
-	spans = ans.split("");
-	spgues = gues.split("")
-input.onkeyup = function () {
-    a.value = event.key;
-    var i = 0;
 
-    	while (i < spans.length)	{
-    	var n = spans.indexOf(spans[i]);
-    		if (spans[i] === a.value && spans[i] !== used[i])	{
-    			spgues.splice(n,1, spans[n]);
-    			counter = counter + 0;
-				}
-			else if (spans[i] !== a.value)  {
-				var wrong = a.value;				
-				}
-			else{
 
-			}
+var bands = ["nirvana", "wallflowers", "trey anastasio"];
+var band = [];
+var guess = "";
 
-     i++;
-
-    }
-         used.push(wrong);
-         counter = used.length;
-
-console.log(used);
-console.log(counter);
-console.log(spans[i] != a.value)
-var remaining = document.getElementById("goodletters");
-remaining.innerHTML = spgues;
+function checkAvailability(arr, val) {
+  return arr.some(function(arrVal) {
+  		match = val === arrVal;
+  	console.log(match);
+    return val === arrVal;
+  });
 }
-var remaining = document.getElementById("goodletters");
-remaining.innerHTML = spgues;
+
+var good = document.getElementById("goodletters");
+var good = []
+var bad = document.getElementById("badletters")
+var bad = []
+var count = document.getElementById("counter");
+var count = 6;
+var guess = document.getElementById("input");
+counter.innerHTML = count; 
+     
+function setWord () {
+	var idx = Math.floor(Math.random() * bands.length);
+	band = bands[idx];
+	band = band.split("");
+	for (let i = 0; i < band.length; i++) {
+		good.push(" _ ");
+	}
+		goodletters.innerHTML = good;
+}
+setWord();
+
+input.onkeyup = function() {
+	guess.value = event.key;
+
+	for (let i = 1; i < band.length; i++){
+		if (guess.value === band[i]){
+			good[i] = band[i]
+		}
+	}
+		checkAvailability(band, guess.value);
+	if (match === false){
+		count -= 1;
+		bad.push(guess.value) 
+	}
+	counter.innerHTML = count;
+	goodletters.innerHTML = good;
+	badletters.innerHTML = bad;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

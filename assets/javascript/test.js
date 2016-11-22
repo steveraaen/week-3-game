@@ -1,15 +1,66 @@
-/*var thing = things[Math.floor(Math.random()*things.length)];
 
-var ans = ["nirvana", "wallflowers", "trey anastasio"];
-var thing = ans[Math.floor(Math.random()*ans.length)];*/
 
-// This array holds the words we are going to choose from.
-// Feel free to add new words!
-var words = ['cat', 'tree', 'swing', 'around', 'scientist'];
+var bands = ["nirvana", "wallflowers", "trey anastasio"];
+var band = [];
+var guess = "";
 
-// This function will pick our word
-function chooseWord () {
-    // Write code here
-var thing = words[Math.floor(Math.random()*words.length)]; 
+function checkAvailability(arr, val) {
+  return arr.some(function(arrVal) {
+  		match = val === arrVal;
+  	console.log(match);
+    return val === arrVal;
+  });
 }
-chooseWord ()
+
+var good = document.getElementById("goodletters");
+var good = []
+var bad = document.getElementById("badletters")
+var bad = []
+var count = document.getElementById("counter");
+var count = 6;
+var guess = document.getElementById("input");
+counter.innerHTML = count; 
+     
+function setWord () {
+	var idx = Math.floor(Math.random() * bands.length);
+	band = bands[idx];
+	band = band.split("");
+	for (let i = 0; i < band.length; i++) {
+		good.push(" _ ");
+	}
+		goodletters.innerHTML = good;
+}
+setWord();
+
+input.onkeyup = function() {
+	guess.value = event.key;
+
+	for (let i = 1; i < band.length; i++){
+		if (guess.value === band[i]){
+			good[i] = band[i]
+		}
+	}
+		checkAvailability(band, guess.value);
+	if (match === false){
+		count -= 1;
+		bad.push(guess.value) 
+	}
+	counter.innerHTML = count;
+	goodletters.innerHTML = good;
+	badletters.innerHTML = bad;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
