@@ -2,6 +2,10 @@ body{
 	width: 960px;
 	background-image: url('../images/balkansOpaque.png');
 }
+.alt{
+	width: 960px;
+	background-image: url('../images/nightsky.jpg');
+}
 img{
 	margin: 50px 10px 10px 0px;
 }
@@ -27,9 +31,9 @@ img{
 	padding-top: 5px;
 }
 .flag{
-	width: 230px;
-	height: 190px;
-	margin:30px 0px 0px 0px;	
+	width: 400px;
+	height: 300px;
+	margin:10px 0px 0px 0px;
 }
 #flag{
 }
@@ -40,9 +44,9 @@ img{
 #stick {
 }
 .stick{
-	width: 230px;
-	height: 190px;
-	margin:30px 0px 0px 0px;
+	width: 400px;
+	height: 300px;
+	margin:10px 0px 0px 0px;
 }
 #title{
 	background-color: #A0CFCB;
@@ -89,7 +93,8 @@ img{
 }
 label{
 	margin: 5px 5px 0px 10px;
-	font-size: 10px;
+	font-size: 15px;
+	color: white;
 }
 
 /*font-family: 'Gloria Hallelujah', cursive;
