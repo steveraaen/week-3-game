@@ -1,23 +1,57 @@
 body{
 	width: 960px;
-	background-image: url('../images/saloon.jpg');
-
+	background-image: url('../images/balkansOpaque.png');
 }
 img{
 	margin: 50px 10px 10px 0px;
 }
-
-#stick {
+.remaining{
+	padding-top: 20px;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 20px;
+	background-color: #A0CFCB;
+}
+.guess{
+	padding-left: 10px;
+	font-size: 16px;
+}
+.used{
+	font-size: 20px;
+	text-align: left;
+}
+.right{
+	font-size: 20px;
+	text-align: left;	
+}
+.txt-pad{
+	padding-top: 5px;
+}
+.flag{
 	width: 230px;
 	height: 190px;
-	margin:30px 0px 30px 40px;
+	margin:30px 0px 0px 0px;	
+}
+#flag{
+}
+#counter{
+	font-size: 20px;
+	text-align: left;
+}
+#stick {
+}
+.stick{
+	width: 230px;
+	height: 190px;
+	margin:30px 0px 0px 0px;
 }
 #title{
-	font-size: 55px;
+	background-color: #A0CFCB;
+	font-size: 45px;
 	color: #941100;
 	letter-spacing: 2px;
+	font-family: 'Libre Baskerville', serif;
 	font-weight: bold;
-	padding: 15px 0px 10px 0px;
+	padding: 10px 0px 10px 0px;
 }
 #main{
 	height: 768px;
@@ -43,16 +77,22 @@ img{
 	border-left-size: 5px;
 }
 #input{
-	padding: 0px 0px 0px 20%;
+	padding: 0px 0px 0px 10px;
 }
 #usedLetters{
-	font-size: 40px;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 20px;
+}
+#goodletters{
+	font-family: 'Libre Baskerville', serif;
+	font-size: 20px;
 }
 label{
 	margin: 5px 5px 0px 10px;
 	font-size: 10px;
 }
 
-
+/*font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Proza Libre', sans-serif;*/
 
 

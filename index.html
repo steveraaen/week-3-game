@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Libre+Baskerville|Proza+Libre" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -10,32 +11,30 @@
 <body>
 	<div class= "container" id = "main">
 		<div class = "row">
-			<div class = "col-md-12" id = "title">Hangman</div>
+			<div class = "col-sm-12" id = "title">Hangman</div>
 		</div>
-		<div class = "row" >
-			<div class = "col-md-12">
-				<div id = "counter""></div>
-				<div id = "goodletters""></div>
-			</div>
+		<div class = "row well">
+			<div class = "col-sm-3 guess right"><b>Chances Left</b></div>
+			<div class = "col-sm-1 guess" id = "counter"></div>
+			<div class = "col-sm-3 guess right"><b>Good Guesses</b></div>
+			<div class = "col-sm-5 guess" id = "goodletters"></div>
+			
 		</div>
 		<div class="form-group row">
-		  	<label for="input" class="col-xs-6 col-form-label">Enter a Letter</label>
-		  	<div class="col-md-12">
+		  	<div class = "col-xs-2">Enter a Letter</div>
+		  	<div class="col-xs-9">
 		    <input class="form-control" type="text"  id="input">
 		  </div>
 		</div>
-		<div class=" row">
-		  	<div class="col-md-12">
-		    <div id="badletters"></div>
+		<div class="row well">
+			<div class = "col-sm-2 used">Your Word</div>
+		  	<div class="col-sm-10 guess- " id="usedletters">
 		</div></div>
+		<div id = "stick" class="row">
+		  	<div class="col-sm-12" ></div>
+		</div>
 		<div class=" row">
-		  	<div class="col-md-12">
-		<div  id = "stick"></div>
-	</div>
-	</div>
-			<div class=" row">
-		  	<div class="col-md-12">
-		<div class = "bandpix" id = "bandpix"></div>
+		<div class = "col-sm-12 flag" id = "flag"></div>
 	</div>
 	</div>
 <!-- 		<script type="text/javascript" src= "assets/javascript/game.js"></script> -->
