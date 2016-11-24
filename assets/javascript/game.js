@@ -31,7 +31,8 @@ var bad = []
 var count = document.getElementById("counter");
 var count = 6;
 var guess = document.getElementById("input");
-counter.innerHTML = count;      
+counter.innerHTML = count;
+   
 function setWord () {
 	var idx = Math.floor(Math.random() * countries.length);
 	countryStr = countries[idx];
@@ -76,7 +77,7 @@ input.onkeyup = function() {
 	}
 	counter.innerHTML = count;
 	goodletters.innerHTML = good.toString();
-	usedletters.innerHTML = bad;
+	usedLetters.innerHTML = bad;
 	if (good.toString() === country.toString())	{
 		var playAgain = confirm("YOU WON!!  Play Again?")
 		document.location.reload();
