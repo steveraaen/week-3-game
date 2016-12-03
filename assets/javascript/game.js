@@ -1,10 +1,11 @@
 function checkGood(arr, val) {
   		return arr.some(function(arrVal) {
   		match = val === arrVal;
-  		console.log("good = "+ match)
+/*  		console.log("good = "+ match)*/
     	return val === arrVal;
   });
 }
+
 var countries = ["croatia", "slovenia", "serbia", "bosnia", "romania", "poland"];
 var country = [];
 var guess = "";
@@ -23,24 +24,32 @@ var hangman_2 = "<img class = 'stick' src = 'assets/images/hangman-2.png' alt = 
 var hangman_1 = "<img class = 'stick' src = 'assets/images/hangman-1.png' alt = 'som text'>"
 var hangman_lose = "<img class = 'stick' src = 'assets/images/hangman-lose.png' alt = 'som text'>"
 var stick= document.getElementById("stick");
-document.getElementById("stick").innerHTML = hangman_start;
-var good = document.getElementById("goodletters");
-var good = []
-var bad = document.getElementById("usedletters")
+
+/*var good=[]
 var bad = []
-var count = document.getElementById("counter");
-var count = 6;
+var count;*/
+var numWins = 0;
+var numLosses = document.getElementById("losses");
+numLosses = 0;
 var guess = document.getElementById("input");
-counter.innerHTML = count;
-   
+
 function setWord () {
+good=[]
+bad = []
+count = 6;
+	counter.innerHTML = count;
 	var idx = Math.floor(Math.random() * countries.length);
 	countryStr = countries[idx];
 	country = countryStr.split("");
 	for (let i = 0; i < country.length; i++) {
-		good.push(" _ ");
+		good.push("_");
+		goodStr = good.join('')
 	}
-		goodletters.innerHTML = good;
+		goodletters.innerHTML = goodStr;
+		wins.innerHTML = numWins;
+		losses.innerHTML = numLosses;
+		document.getElementById("stick").innerHTML = hangman_start;
+
 	if (countryStr === "poland"){
 		flag = document.getElementById("flag").innerHTML = poland;
 	}
@@ -68,19 +77,26 @@ input.onkeyup = function() {
 	guess.value = event.key;
 	for (let i = 0; i < country.length + 1; i++){
 		if (guess.value === country[i]){
-			good[i] = country[i]
+			good[i] = country[i];
 		}
 	}	
 	if (checkGood(country, guess.value) === false && checkGood(bad, guess.value) === false ){
 		count -= 1;
-		bad.push(guess.value) 
+		bad.push(guess.value)
+
 	}
 	counter.innerHTML = count;
-	goodletters.innerHTML = good.toString();
+	goodletters.innerHTML = good.join('');
+	
 	usedLetters.innerHTML = bad;
-	if (good.toString() === country.toString())	{
+	if (good.join('') === country.join(''))	{
+		numWins += 1;
+		wins.innerHTML = numWins;
 		var playAgain = confirm("YOU WON!!  Play Again?")
-		document.location.reload();
+/*		good = [];
+		bad = [];
+		count = 6;*/
+		setWord ();
 	}
 
 	else if (count === 5 && good !== country)	{
@@ -100,11 +116,19 @@ input.onkeyup = function() {
 	}
 	else if (count === 0) {
 		stick = document.getElementById("stick").innerHTML = hangman_lose;
-		var playAgain = confirm("YOU LOST!!  Play Again?")
-		document.location.reload();		
+		numLosses += 1;
+		losses.innerHTML = numLosses;
+		playAgain = confirm("Dummy!  The word was  " + country.join(''));
+		setWord ();
+
+		
+				
 	}
 	console.log("good  = " + good)
+	console.log("goodStr  = " + goodStr)
 	console.log("country  = " + country)
+	console.log("country Str = " + countryStr)
+	console.log("guess.val = " + guess.value)
 }
 
 
