@@ -1,12 +1,14 @@
+
+
 function checkGood(arr, val) {
   		return arr.some(function(arrVal) {
   		match = val === arrVal;
-/*  		console.log("good = "+ match)*/
+  		console.log("good = "+ match)
     	return val === arrVal;
   });
 }
 
-var countries = ["croatia", "slovenia", "serbia", "bosnia", "romania", "poland"];
+var countries = ["cro atia" , "slovenia", "serbia", "bosnia", "romania", "poland"];
 var country = [];
 var guess = "";
 var flag = document.getElementById("flag");
@@ -34,9 +36,9 @@ numLosses = 0;
 var guess = document.getElementById("input");
 
 function setWord () {
-good=[]
-bad = []
-count = 6;
+	good=[]
+	bad = []
+	count = 6;
 	counter.innerHTML = count;
 	var idx = Math.floor(Math.random() * countries.length);
 	countryStr = countries[idx];
@@ -80,7 +82,7 @@ input.onkeyup = function() {
 			good[i] = country[i];
 		}
 	}	
-	if (checkGood(country, guess.value) === false && checkGood(bad, guess.value) === false ){
+	if (checkGood(country, guess.value) === false && checkGood(bad, guess.value) === false){
 		count -= 1;
 		bad.push(guess.value)
 
@@ -93,9 +95,9 @@ input.onkeyup = function() {
 		numWins += 1;
 		wins.innerHTML = numWins;
 		var playAgain = confirm("YOU WON!!  Play Again?")
-/*		good = [];
+		good = [];
 		bad = [];
-		count = 6;*/
+		count = 6;
 		setWord ();
 	}
 
